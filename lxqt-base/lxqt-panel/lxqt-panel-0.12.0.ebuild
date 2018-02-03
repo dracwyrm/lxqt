@@ -34,8 +34,8 @@ RDEPEND="
 	dev-qt/qtxml:5
 	kde-frameworks/kguiaddons:5
 	kde-frameworks/kwindowsystem:5[X]
-	>=lxde-base/lxmenu-data-0.1.2
-	>=lxde-base/menu-cache-0.3.3
+	>=lxde-base/lxmenu-data-0.1.5
+	>=lxde-base/menu-cache-1.1.0
 	~lxqt-base/liblxqt-${PV}
 	~lxqt-base/lxqt-globalkeys-${PV}
 	x11-libs/libX11
@@ -58,12 +58,17 @@ RDEPEND="
 			media-sound/pulseaudio
 		)
 	)
-	!!lxqt-base/lxqt-common"
+	!lxqt-base/lxqt-common
+"
 DEPEND="${RDEPEND}
 	>=dev-util/lxqt-build-tools-0.4.0
-	dev-qt/linguist-tools:5"
+	dev-qt/linguist-tools:5
+"
 
-PATCHES=( "${FILESDIR}/${P}-fix-worldclock-size-updating.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-fix-worldclock-size-updating.patch"
+	"${FILESDIR}/${P}-fix-wrongly-positioned-popups.patch"
+)
 
 src_prepare() {
 	cmake-utils_src_prepare

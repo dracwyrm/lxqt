@@ -21,8 +21,10 @@ SLOT="0"
 RDEPEND="
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5
-	dev-qt/qtwidgets:5"
+	dev-qt/qtwidgets:5
+"
 DEPEND="${DEPEND}
-	>=dev-util/lxqt-build-tools-0.4.0"
+	>=dev-util/lxqt-build-tools-0.4.0
+"
 
 PATCHES=( "${FILESDIR}/${P}-nofetch.patch" )

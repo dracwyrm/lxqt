@@ -21,13 +21,14 @@ SLOT="0"
 RDEPEND="
 	app-admin/sudo
 	>=dev-libs/libqtxdg-1.0.0:=
-	>=dev-util/lxqt-build-tools-0.4.0
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
 	dev-qt/qtwidgets:5
 	~lxqt-base/liblxqt-${PV}
-	!!lxqt-base/lxqt-common"
-DEPEND="${RDEPEND}"
+"
+DEPEND="${RDEPEND}
+	>=dev-util/lxqt-build-tools-0.4.0
+"
 
 mycmakeargs=( -DPULL_TRANSLATIONS=OFF )

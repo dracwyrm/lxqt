@@ -25,15 +25,17 @@ RDEPEND="
 	dev-qt/qtgui:5
 	dev-qt/qtwidgets:5
 	dev-qt/qtx11extras:5
-	>=lxde-base/menu-cache-0.4.1
-	media-libs/libexif
+	>=lxde-base/menu-cache-1.1.0
+	media-libs/libexif:=
 	>=x11-libs/libfm-1.2.0:=
 	x11-libs/libxcb:=
-	!<x11-misc/pcmanfm-qt-0.11.0"
+	~x11-misc/pcmanfm-qt-${PV}
+"
 DEPEND="${RDEPEND}
 	dev-qt/linguist-tools:5
 	>=dev-util/lxqt-build-tools-0.4.0
 	lxqt-base/liblxqt
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 mycmakeargs=( -DPULL_TRANSLATIONS=NO )

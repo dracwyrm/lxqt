@@ -24,9 +24,11 @@ RDEPEND="
 	dev-qt/qtwidgets:5
 	dev-qt/qtx11extras:5
 	x11-libs/libX11
-	~x11-libs/qtermwidget-${PV}"
+	~x11-libs/qtermwidget-${PV}
+"
 DEPEND="${RDEPEND}
-	dev-util/lxqt-build-tools"
+	>=dev-util/lxqt-build-tools-0.4.0
+"
 
 PATCHES=( "${FILESDIR}/${P}-nofetch.patch" )
 

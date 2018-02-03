@@ -19,7 +19,7 @@ LICENSE="LGPL-2.1+"
 SLOT="0"
 
 RDEPEND="
-	>=dev-cpp/muParser-2.2.3
+	>=dev-cpp/muParser-2.2.3:=
 	dev-libs/glib:2
 	>=dev-libs/libqtxdg-1.0.0:=
 	dev-qt/qtcore:5
@@ -29,15 +29,16 @@ RDEPEND="
 	dev-qt/qtx11extras:5
 	dev-qt/qtxml:5
 	kde-frameworks/kwindowsystem:5
-	>=lxde-base/menu-cache-0.5.1
+	>=lxde-base/menu-cache-1.1.0
 	~lxqt-base/liblxqt-${PV}
 	~lxqt-base/lxqt-globalkeys-${PV}
-	!!lxqt-base/lxqt-common"
+"
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-3.6.2
 	>=dev-util/lxqt-build-tools-0.4.0
 	dev-qt/linguist-tools:5
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 mycmakeargs=( -DPULL_TRANSLATIONS=OFF )
 

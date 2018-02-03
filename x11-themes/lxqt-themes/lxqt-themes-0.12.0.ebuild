@@ -9,7 +9,7 @@ HOMEPAGE="http://lxqt.org/"
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/lxde/${PN}.git"
+	EGIT_REPO_URI="git://git.lxde.org/git/lxde/${PN}.git"
 else
 	SRC_URI="https://github.com/lxde/${PN}/releases/download/${PV}/${P}.tar.xz"
 	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
@@ -18,9 +18,9 @@ fi
 LICENSE="LGPL-2.1+"
 SLOT="0"
 
-DEPEND="
+RDEPEND="!lxqt-base/lxqt-common"
+DEPEND="${RDEPEND}
 	>=dev-util/lxqt-build-tools-0.4.0
-	!!lxqt-base/lxqt-common
 "
 
 mycmakeargs=( -DPULL_TRANSLATIONS=OFF )

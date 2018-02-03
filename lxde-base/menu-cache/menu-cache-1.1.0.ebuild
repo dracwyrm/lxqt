@@ -20,10 +20,12 @@ SLOT="0/2"
 IUSE=""
 
 RDEPEND="dev-libs/glib:2
-	x11-libs/libfm-extra"
+	x11-libs/libfm-extra:=
+"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 src_install() {
 	default

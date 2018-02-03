@@ -30,7 +30,7 @@ RDEPEND="
 	kde-frameworks/kwindowsystem:5
 	kde-plasma/libkscreen:5
 	~lxqt-base/liblxqt-${PV}
-	sys-libs/zlib
+	sys-libs/zlib:=
 	x11-apps/setxkbmap
 	x11-libs/libICE
 	x11-libs/libSM
@@ -39,10 +39,11 @@ RDEPEND="
 	x11-libs/libXcursor
 	x11-libs/libXext
 	x11-libs/libXfixes
-	!!lxqt-base/lxqt-common"
+"
 DEPEND="${RDEPEND}
 	>=dev-util/lxqt-build-tools-0.4.0
-	dev-qt/linguist-tools:5"
+	dev-qt/linguist-tools:5
+"
 
 mycmakeargs=( -DPULL_TRANSLATIONS=OFF )
 

@@ -18,4 +18,5 @@ fi
 LICENSE="BSD"
 SLOT="0"
 
-DEPEND="dev-qt/qtcore:5"
+RDEPEND="dev-qt/qtcore:5"
+DEPEND="${RDEPEND}"

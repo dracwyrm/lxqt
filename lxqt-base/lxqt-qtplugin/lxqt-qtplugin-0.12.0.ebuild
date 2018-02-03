@@ -19,7 +19,7 @@ LICENSE="LGPL-2.1+"
 SLOT="0"
 
 RDEPEND="
-	dev-libs/libdbusmenu-qt[qt5(+)]
+	dev-libs/libdbusmenu-qt:=[qt5(+)]
 	>=dev-libs/libqtxdg-3.0.0:=
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5
@@ -27,9 +27,10 @@ RDEPEND="
 	~lxqt-base/liblxqt-${PV}
 	>=x11-libs/libfm-qt-0.12.0:=
 	x11-libs/libX11
-	!!lxqt-base/lxqt-common"
+"
 DEPEND="${RDEPEND}
 	>=dev-util/lxqt-build-tools-0.4.0
-	dev-qt/linguist-tools:5"
+	dev-qt/linguist-tools:5
+"
 
 mycmakeargs=( -DPULL_TRANSLATIONS=OFF )

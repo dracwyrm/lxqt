@@ -28,9 +28,10 @@ RDEPEND="
 	dev-qt/qtxml:5
 	kde-frameworks/kwindowsystem:5[X]
 	x11-libs/libXScrnSaver
-	!!lxqt-base/lxqt-common"
+"
 DEPEND="${RDEPEND}
 	>=dev-util/lxqt-build-tools-0.4.0
-	dev-qt/linguist-tools:5"
+	dev-qt/linguist-tools:5
+"
 
 mycmakeargs=( -DPULL_TRANSLATIONS=OFF )

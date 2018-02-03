@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -31,12 +31,14 @@ RDEPEND="
 	x11-libs/libxcb:=
 	x11-misc/xdg-utils
 	virtual/eject
-	virtual/freedesktop-icon-theme"
+	virtual/freedesktop-icon-theme
+"
 DEPEND="${RDEPEND}
 	dev-qt/linguist-tools:5
 	>=dev-util/lxqt-build-tools-0.4.0
 	>=dev-util/intltool-0.40
 	sys-devel/gettext
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 mycmakeargs=( -DPULL_TRANSLATIONS=NO )

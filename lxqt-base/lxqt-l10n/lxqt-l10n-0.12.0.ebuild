@@ -18,8 +18,9 @@ fi
 LICENSE="LGPL-2.1+"
 SLOT="0"
 
+RDEPEND="~lxqt-base/liblxqt-${PV}"
 DEPEND="
+	${RDEPEND}
 	dev-qt/linguist-tools:5
 	>=dev-util/lxqt-build-tools-0.4.0
-	~lxqt-base/liblxqt-${PV}
-	!!lxqt-base/lxqt-common"
+"

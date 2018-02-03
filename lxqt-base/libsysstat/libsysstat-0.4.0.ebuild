@@ -21,4 +21,5 @@ SLOT="0"
 RDEPEND="dev-qt/qtcore:5"
 DEPEND="${RDEPEND}
 	>=dev-util/lxqt-build-tools-0.4.0
-	dev-qt/linguist-tools:5"
+	dev-qt/linguist-tools:5
+"

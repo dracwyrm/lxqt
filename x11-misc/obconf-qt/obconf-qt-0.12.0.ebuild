@@ -33,10 +33,12 @@ RDEPEND="
 	x11-libs/libSM
 	x11-libs/libX11
 	x11-libs/libXft
-	x11-libs/pango"
+	x11-libs/pango
+"
 DEPEND="${RDEPEND}
 	>=dev-util/lxqt-build-tools-0.4.0
 	dev-qt/linguist-tools:5
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 mycmakeargs=( -DPULL_TRANSLATIONS=OFF )

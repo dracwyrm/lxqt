@@ -17,6 +17,7 @@ else
 fi
 
 IUSE="+themes"
+
 LICENSE="LGPL-2.1+"
 SLOT="0"
 
@@ -33,13 +34,15 @@ RDEPEND="
 	x11-libs/libX11
 	x11-misc/xdg-user-dirs
 	themes? ( ~x11-themes/lxqt-themes-${PV} )
-	!!lxqt-base/lxqt-common"
+	!lxqt-base/lxqt-common
+"
 DEPEND="${RDEPEND}
 	dev-qt/linguist-tools:5
 	>=dev-util/lxqt-build-tools-0.4.0
 	dev-util/intltool
 	sys-devel/gettext
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 mycmakeargs=( -DPULL_TRANSLATIONS=OFF )
 

@@ -18,7 +18,7 @@ fi
 LICENSE="LGPL-2.1+"
 SLOT="0"
 
-RDEPEND="${CDEPEND}
+RDEPEND="
 	>=dev-libs/libqtxdg-1.0.0:=
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
@@ -29,13 +29,14 @@ RDEPEND="${CDEPEND}
 	kde-frameworks/kidletime:5
 	kde-frameworks/solid:5
 	~lxqt-base/liblxqt-${PV}
-	!!lxqt-base/lxqt-common
 	|| (
 		sys-power/upower
 		sys-power/upower-pm-utils
-	)"
+	)
+"
 DEPEND="${RDEPEND}
 	dev-qt/linguist-tools:5
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 mycmakeargs=( -DPULL_TRANSLATIONS=OFF )

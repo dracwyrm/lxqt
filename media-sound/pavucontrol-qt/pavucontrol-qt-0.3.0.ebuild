@@ -25,10 +25,11 @@ RDEPEND="
 	dev-qt/qtcore:5
 	dev-qt/qtwidgets:5
 	~lxqt-base/liblxqt-0.12.0
-	!!lxqt-base/lxqt-common"
+"
 DEPEND="${RDEPEND}
 	>=dev-util/lxqt-build-tools-0.4.0
 	dev-qt/linguist-tools:5
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 mycmakeargs=( -DPULL_TRANSLATIONS=OFF )

@@ -29,10 +29,11 @@ RDEPEND="
 	~lxqt-base/liblxqt-${PV}
 	>=dev-libs/libqtxdg-1.0.0:=
 	sys-auth/polkit-qt[qt5(+)]
-	!!lxqt-base/lxqt-common"
+"
 DEPEND="${RDEPEND}
 	dev-qt/linguist-tools:5
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 mycmakeargs=( -DPULL_TRANSLATIONS=OFF )
 

@@ -31,11 +31,13 @@ RDEPEND="
 	>=x11-libs/libfm-1.2:=
 	>=x11-libs/libfm-qt-0.12.0:=
 	x11-libs/libX11
-	x11-libs/libXfixes"
+	x11-libs/libXfixes
+"
 DEPEND="${RDEPEND}
-	>=dev-util/lxqt-build-tools-0.3.0
+	>=dev-util/lxqt-build-tools-0.4.0
 	dev-qt/linguist-tools:5
 	lxqt-base/liblxqt
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 mycmakeargs=( -DPULL_TRANSLATIONS=OFF )

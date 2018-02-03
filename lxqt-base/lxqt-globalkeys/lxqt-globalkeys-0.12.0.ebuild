@@ -31,9 +31,10 @@ RDEPEND="
 	x11-libs/libSM
 	x11-libs/libX11
 	x11-libs/libXext
-	!!lxqt-base/lxqt-common"
+"
 DEPEND="${RDEPEND}
 	>=dev-util/lxqt-build-tools-0.4.0
-	dev-qt/linguist-tools:5="
+	dev-qt/linguist-tools:5
+"
 
 mycmakeargs=( -DPULL_TRANSLATIONS=OFF )

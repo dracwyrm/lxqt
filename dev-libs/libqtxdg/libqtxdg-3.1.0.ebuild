@@ -26,10 +26,12 @@ RDEPEND="
 	dev-qt/qtsvg:5
 	dev-qt/qtwidgets:5
 	dev-qt/qtxml:5
-	x11-misc/xdg-utils"
+	x11-misc/xdg-utils
+"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	test? ( dev-qt/qttest:5 )"
+	test? ( dev-qt/qttest:5 )
+"
 
 src_configure() {
 	local mycmakeargs=(
