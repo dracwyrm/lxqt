@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit cmake-utils
+inherit cmake-utils versionator
 
 DESCRIPTION="Daemon and library for global keyboard shortcuts registration"
 HOMEPAGE="http://lxqt.org/"
@@ -19,14 +19,14 @@ LICENSE="LGPL-2.1+"
 SLOT="0"
 
 RDEPEND="
-	>=dev-libs/libqtxdg-1.0.0:=
+	dev-libs/libqtxdg:0/3
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
 	dev-qt/qtwidgets:5
 	dev-qt/qtx11extras:5
 	dev-qt/qtxml:5
-	~lxqt-base/liblxqt-${PV}
+	=lxqt-base/liblxqt-$(get_version_component_range 1-2)*
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11

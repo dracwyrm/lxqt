@@ -2,10 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit cmake-utils
+inherit cmake-utils versionator
 
 DESCRIPTION="LXQt desktop panel and plugins"
 HOMEPAGE="http://lxqt.org/"
+
+MY_PV="$(get_version_component_range 1-2)*"
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
@@ -24,7 +26,7 @@ REQUIRED_USE="volume? ( || ( alsa pulseaudio ) )"
 
 RDEPEND="
 	dev-libs/glib:2
-	>=dev-libs/libqtxdg-3.1.0:=
+	dev-libs/libqtxdg:0/3
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
@@ -36,8 +38,8 @@ RDEPEND="
 	kde-frameworks/kwindowsystem:5[X]
 	>=lxde-base/lxmenu-data-0.1.5
 	>=lxde-base/menu-cache-1.1.0
-	~lxqt-base/liblxqt-${PV}
-	~lxqt-base/lxqt-globalkeys-${PV}
+	=lxqt-base/liblxqt-${MY_PV}
+	=lxqt-base/lxqt-globalkeys-${MY_PV}
 	x11-libs/libX11
 	cpuload? ( sys-libs/libstatgrab )
 	kbindicator? ( x11-libs/libxkbcommon )
@@ -45,7 +47,7 @@ RDEPEND="
 	networkmonitor? ( sys-libs/libstatgrab )
 	sensors? ( sys-apps/lm_sensors )
 	statusnotifier? ( dev-libs/libdbusmenu-qt[qt5(+)] )
-	sysstat? ( >=lxqt-base/libsysstat-0.4 )
+	sysstat? ( >=lxqt-base/libsysstat-0.4.0 )
 	tray? (
 		x11-libs/libXcomposite
 		x11-libs/libXdamage

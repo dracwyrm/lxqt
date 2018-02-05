@@ -19,7 +19,8 @@ LICENSE="LGPL-2.1+"
 SLOT="0/2"
 IUSE=""
 
-RDEPEND="dev-libs/glib:2
+RDEPEND="
+	dev-libs/glib:2
 	x11-libs/libfm-extra:=
 "
 DEPEND="${RDEPEND}

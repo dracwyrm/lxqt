@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit cmake-utils
+inherit cmake-utils versionator
 
 DESCRIPTION="LXQt GUI frontend for sudo"
 HOMEPAGE="http://lxqt.org/"
@@ -20,12 +20,12 @@ SLOT="0"
 
 RDEPEND="
 	app-admin/sudo
-	>=dev-libs/libqtxdg-1.0.0:=
+	dev-libs/libqtxdg:0/3
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
 	dev-qt/qtwidgets:5
-	~lxqt-base/liblxqt-${PV}
+	=lxqt-base/liblxqt-$(get_version_component_range 1-2)*
 "
 DEPEND="${RDEPEND}
 	>=dev-util/lxqt-build-tools-0.4.0

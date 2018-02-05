@@ -2,10 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit cmake-utils
+inherit cmake-utils versionator
 
 DESCRIPTION="LXQt system integration plugin for Qt"
 HOMEPAGE="http://lxqt.org/"
+
+MY_PV="$(get_version_component_range 1-2)*"
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
@@ -20,12 +22,12 @@ SLOT="0"
 
 RDEPEND="
 	dev-libs/libdbusmenu-qt:=[qt5(+)]
-	>=dev-libs/libqtxdg-3.0.0:=
+	dev-libs/libqtxdg:0/3
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5
 	dev-qt/qtwidgets:5
-	~lxqt-base/liblxqt-${PV}
-	>=x11-libs/libfm-qt-0.12.0:=
+	=lxqt-base/liblxqt-${MY_PV}
+	=x11-libs/libfm-qt-${MY_PV}
 	x11-libs/libX11
 "
 DEPEND="${RDEPEND}

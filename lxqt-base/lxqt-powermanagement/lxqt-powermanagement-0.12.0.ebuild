@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit cmake-utils
+inherit cmake-utils versionator
 
 DESCRIPTION="LXQt daemon for power management and auto-suspend"
 HOMEPAGE="http://lxqt.org/"
@@ -19,7 +19,7 @@ LICENSE="LGPL-2.1+"
 SLOT="0"
 
 RDEPEND="
-	>=dev-libs/libqtxdg-1.0.0:=
+	dev-libs/libqtxdg:0/3
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
@@ -28,7 +28,7 @@ RDEPEND="
 	dev-qt/qtx11extras:5
 	kde-frameworks/kidletime:5
 	kde-frameworks/solid:5
-	~lxqt-base/liblxqt-${PV}
+	=lxqt-base/liblxqt-$(get_version_component_range 1-2)*
 	|| (
 		sys-power/upower
 		sys-power/upower-pm-utils

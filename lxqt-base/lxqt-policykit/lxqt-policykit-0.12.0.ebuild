@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit cmake-utils
+inherit cmake-utils versionator
 
 DESCRIPTION="LXQt PolKit authentication agent"
 HOMEPAGE="http://lxqt.org/"
@@ -20,14 +20,14 @@ SLOT="0"
 
 RDEPEND="
 	dev-libs/glib:2
+	dev-libs/libqtxdg:0/3
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
 	dev-qt/qtwidgets:5
 	dev-qt/qtx11extras:5
 	dev-qt/qtxml:5
-	~lxqt-base/liblxqt-${PV}
-	>=dev-libs/libqtxdg-1.0.0:=
+	=lxqt-base/liblxqt-$(get_version_component_range 1-2)*
 	sys-auth/polkit-qt[qt5(+)]
 "
 DEPEND="${RDEPEND}

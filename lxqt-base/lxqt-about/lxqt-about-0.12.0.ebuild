@@ -16,17 +16,17 @@ else
 fi
 
 LICENSE="LGPL-2.1+"
-SLOT="0/$(get_version_component_range 1-2)"
+SLOT="0"
 
-DEPEND="
+RDEPEND="
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
 	dev-qt/qtwidgets:5
 	dev-qt/qtx11extras:5
 	dev-qt/qtxml:5
-	lxqt-base/liblxqt:${SLOT}
+	=lxqt-base/liblxqt-$(get_version_component_range 1-2)*
 "
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}"
 
 mycmakeargs=( -DPULL_TRANSLATIONS=OFF )

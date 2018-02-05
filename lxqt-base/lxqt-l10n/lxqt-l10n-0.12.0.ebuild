@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit cmake-utils
+inherit cmake-utils versionator
 
 DESCRIPTION="LXQt localisation package"
 HOMEPAGE="http://lxqt.org/"
@@ -18,9 +18,8 @@ fi
 LICENSE="LGPL-2.1+"
 SLOT="0"
 
-RDEPEND="~lxqt-base/liblxqt-${PV}"
-DEPEND="
-	${RDEPEND}
+RDEPEND="=lxqt-base/liblxqt-$(get_version_component_range 1-2)*"
+DEPEND="${RDEPEND}
 	dev-qt/linguist-tools:5
 	>=dev-util/lxqt-build-tools-0.4.0
 "

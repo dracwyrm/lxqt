@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit cmake-utils
+inherit cmake-utils versionator
 
 if [[ "${PV}" == "9999" ]]; then
 	inherit git-r3
@@ -20,14 +20,14 @@ LICENSE="GPL-2+"
 SLOT="0"
 
 RDEPEND="
-	>=dev-libs/glib-2.18:2
+	dev-libs/glib:2
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
 	dev-qt/qtwidgets:5
 	dev-qt/qtx11extras:5
 	>=x11-libs/libfm-1.2.0:=
-	>=x11-libs/libfm-qt-0.12.0:=
+	=x11-libs/libfm-qt-$(get_version_component_range 1-2)*
 	x11-libs/libxcb:=
 	x11-misc/xdg-utils
 	virtual/eject

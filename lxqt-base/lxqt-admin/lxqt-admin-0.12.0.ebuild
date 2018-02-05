@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit cmake-utils
+inherit cmake-utils versionator
 
 DESCRIPTION="LXQt system administration tool"
 HOMEPAGE="http://lxqt.org/"
@@ -27,7 +27,7 @@ RDEPEND="
 	dev-qt/qtwidgets:5
 	dev-qt/qtx11extras:5
 	dev-qt/qtxml:5
-	~lxqt-base/liblxqt-${PV}
+	=lxqt-base/liblxqt-$(get_version_component_range 1-2)*
 	kde-frameworks/kwindowsystem:5
 	x11-libs/libX11
 "

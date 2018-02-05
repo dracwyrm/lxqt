@@ -23,7 +23,7 @@ RDEPEND="
 	dev-qt/qtgui:5
 	dev-qt/qtwidgets:5
 "
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	>=dev-util/lxqt-build-tools-0.4.0
 "
 

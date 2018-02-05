@@ -2,10 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit cmake-utils
+inherit cmake-utils versionator
 
 DESCRIPTION="LXQt quick launcher"
 HOMEPAGE="http://lxqt.org/"
+
+MY_PV="$(get_version_component_range 1-2)*"
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
@@ -21,7 +23,7 @@ SLOT="0"
 RDEPEND="
 	>=dev-cpp/muParser-2.2.3:=
 	dev-libs/glib:2
-	>=dev-libs/libqtxdg-1.0.0:=
+	dev-libs/libqtxdg:0/3
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
@@ -30,8 +32,8 @@ RDEPEND="
 	dev-qt/qtxml:5
 	kde-frameworks/kwindowsystem:5
 	>=lxde-base/menu-cache-1.1.0
-	~lxqt-base/liblxqt-${PV}
-	~lxqt-base/lxqt-globalkeys-${PV}
+	=lxqt-base/liblxqt-${MY_PV}
+	=lxqt-base/lxqt-globalkeys-${MY_PV}
 "
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-3.6.2

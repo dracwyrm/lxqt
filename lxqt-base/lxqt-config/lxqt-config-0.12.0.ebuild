@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit cmake-utils
+inherit cmake-utils versionator
 
 DESCRIPTION="LXQt system configuration control center"
 HOMEPAGE="http://lxqt.org/"
@@ -19,7 +19,7 @@ LICENSE="GPL-2 LGPL-2.1+"
 SLOT="0"
 
 RDEPEND="
-	>=dev-libs/libqtxdg-1.0.0:=
+	dev-libs/libqtxdg:0/3
 	dev-qt/qtconcurrent:5
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
@@ -29,7 +29,7 @@ RDEPEND="
 	dev-qt/qtxml:5
 	kde-frameworks/kwindowsystem:5
 	kde-plasma/libkscreen:5
-	~lxqt-base/liblxqt-${PV}
+	=lxqt-base/liblxqt-$(get_version_component_range 1-2)*
 	sys-libs/zlib:=
 	x11-apps/setxkbmap
 	x11-libs/libICE

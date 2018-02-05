@@ -3,10 +3,12 @@
 
 EAPI=6
 
-inherit cmake-utils
+inherit cmake-utils versionator
 
 DESCRIPTION="LXQT session manager"
 HOMEPAGE="http://lxqt.org/"
+
+MY_PV="$(get_version_component_range 1-2)*"
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
@@ -22,7 +24,7 @@ LICENSE="LGPL-2.1+"
 SLOT="0"
 
 RDEPEND="
-	>=dev-libs/libqtxdg-1.0.0:=
+	dev-libs/libqtxdg:0/3
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
@@ -30,10 +32,10 @@ RDEPEND="
 	dev-qt/qtx11extras:5
 	dev-qt/qtxml:5
 	kde-frameworks/kwindowsystem:5[X]
-	~lxqt-base/liblxqt-${PV}
+	=lxqt-base/liblxqt-${MY_PV}
 	x11-libs/libX11
 	x11-misc/xdg-user-dirs
-	themes? ( ~x11-themes/lxqt-themes-${PV} )
+	themes? ( =x11-themes/lxqt-themes-${MY_PV} )
 	!lxqt-base/lxqt-common
 "
 DEPEND="${RDEPEND}
