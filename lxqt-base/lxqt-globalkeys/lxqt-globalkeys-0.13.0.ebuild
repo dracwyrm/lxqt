@@ -9,7 +9,7 @@ HOMEPAGE="http://lxqt.org/"
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/lxde/${PN}.git"
+	EGIT_REPO_URI="https://github.com/lxqt/${PN}.git"
 else
 	SRC_URI="https://downloads.lxqt.org/downloads/${PN}/${PV}/${P}.tar.xz"
 	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
@@ -26,7 +26,7 @@ RDEPEND="
 	dev-qt/qtwidgets:5
 	dev-qt/qtx11extras:5
 	dev-qt/qtxml:5
-	lxqt-base/liblxqt:0/$(get_version_component_range 2)
+	lxqt-base/liblxqt:0/$(get_version_component_range 2)=
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11

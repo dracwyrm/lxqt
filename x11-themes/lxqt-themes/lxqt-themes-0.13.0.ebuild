@@ -16,7 +16,7 @@ else
 fi
 
 LICENSE="LGPL-2.1+"
-SLOT="0//$(get_version_component_range 2)"
+SLOT="0/$(get_version_component_range 2)"
 
 RDEPEND="!lxqt-base/lxqt-common"
 DEPEND="${RDEPEND}
