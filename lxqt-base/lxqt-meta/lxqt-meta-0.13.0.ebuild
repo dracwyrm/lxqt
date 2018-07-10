@@ -8,8 +8,8 @@ DESCRIPTION="Meta ebuild for LXQt, the Lightweight Desktop Environment"
 HOMEPAGE="http://lxqt.org/"
 
 LICENSE="metapackage"
-MY_SLOT="$(get_version_component_range 2)"
-SLOT="0/${MY_SLOT}"
+MY_SLOT="0/$(get_version_component_range 2)"
+SLOT="${MY_SLOT}"
 KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 IUSE="+about admin +filemanager lightdm lximage l10n minimal +policykit
 	powermanagement sddm ssh-askpass sudo"

@@ -30,10 +30,10 @@ RDEPEND="
 	dev-qt/qtx11extras:5
 	dev-qt/qtxml:5
 	kde-frameworks/kwindowsystem:5[X]
-	lxqt-base/liblxqt:0/$(get_version_component_range 2)=
+	lxqt-base/liblxqt:0/$(get_version_component_range 2)
 	x11-libs/libX11
 	x11-misc/xdg-user-dirs
-	themes? ( x11-themes/lxqt-themes:0/$(get_version_component_range 2)= )
+	themes? ( x11-themes/lxqt-themes:0/$(get_version_component_range 2) )
 	!lxqt-base/lxqt-common
 "
 DEPEND="${RDEPEND}

@@ -29,8 +29,8 @@ RDEPEND="
 	dev-qt/qtx11extras:5
 	dev-qt/qtxml:5
 	kde-frameworks/kwindowsystem:5
-	lxqt-base/liblxqt:0/$(get_version_component_range 2)=
-	lxqt-base/lxqt-globalkeys:0/$(get_version_component_range 2)=
+	lxqt-base/liblxqt:0/$(get_version_component_range 2)
+	lxqt-base/lxqt-globalkeys:0/$(get_version_component_range 2)
 "
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-3.6.2

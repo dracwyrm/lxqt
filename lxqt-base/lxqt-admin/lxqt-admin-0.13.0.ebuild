@@ -20,7 +20,7 @@ SLOT="0/$(get_version_component_range 2)"
 
 RDEPEND="
 	dev-libs/glib:2
-	dev-libs/libqtxdg:0/3=
+	dev-libs/libqtxdg:0/3
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5

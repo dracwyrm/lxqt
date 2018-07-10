@@ -26,7 +26,7 @@ RDEPEND="
 	dev-qt/qtwidgets:5
 	dev-qt/qtx11extras:5
 	dev-qt/qtxml:5
-	lxqt-base/liblxqt:0/$(get_version_component_range 2)=
+	lxqt-base/liblxqt:0/$(get_version_component_range 2)
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11

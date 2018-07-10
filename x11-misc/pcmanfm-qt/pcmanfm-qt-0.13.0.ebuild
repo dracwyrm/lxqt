@@ -27,7 +27,7 @@ RDEPEND="
 	dev-qt/qtwidgets:5
 	dev-qt/qtx11extras:5
 	>=x11-libs/libfm-1.2.0:=
-	x11-libs/libfm-qt:0/$(get_version_component_range 2)=
+	x11-libs/libfm-qt:0/$(get_version_component_range 2)
 	x11-libs/libxcb:=
 	x11-misc/xdg-utils
 	virtual/eject

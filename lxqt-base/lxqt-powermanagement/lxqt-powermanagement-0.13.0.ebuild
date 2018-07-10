@@ -16,7 +16,7 @@ else
 fi
 
 LICENSE="LGPL-2.1+"
-SLOT="0/$(get_version_component_range 2)="
+SLOT="0/$(get_version_component_range 2)"
 
 RDEPEND="
 	dev-libs/libqtxdg:0/3
@@ -28,7 +28,7 @@ RDEPEND="
 	dev-qt/qtx11extras:5
 	kde-frameworks/kidletime:5
 	kde-frameworks/solid:5
-	lxqt-base/liblxqt:0/$(get_version_component_range 2)=
+	lxqt-base/liblxqt:0/$(get_version_component_range 2)
 	|| (
 		sys-power/upower
 		sys-power/upower-pm-utils

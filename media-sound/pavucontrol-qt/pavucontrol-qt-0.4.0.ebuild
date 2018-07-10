@@ -20,7 +20,7 @@ SLOT="0"
 
 RDEPEND="
 	dev-libs/glib:2
-	dev-libs/libqtxdg:0/3=
+	dev-libs/libqtxdg:0/3
 	media-sound/pulseaudio[glib]
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5

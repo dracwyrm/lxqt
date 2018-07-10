@@ -25,7 +25,7 @@ RDEPEND="
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
 	dev-qt/qtwidgets:5
-	lxqt-base/liblxqt:0/$(get_version_component_range 2)=
+	lxqt-base/liblxqt:0/$(get_version_component_range 2)
 "
 DEPEND="${RDEPEND}
 	>=dev-util/lxqt-build-tools-0.5.0

@@ -36,8 +36,8 @@ RDEPEND="
 	dev-qt/qtxml:5
 	kde-frameworks/kguiaddons:5
 	kde-frameworks/kwindowsystem:5[X]
-	lxqt-base/liblxqt:0/$(get_version_component_range 2)=
-	lxqt-base/lxqt-globalkeys:0/$(get_version_component_range 2)=
+	lxqt-base/liblxqt:0/$(get_version_component_range 2)
+	lxqt-base/lxqt-globalkeys:0/$(get_version_component_range 2)
 	x11-libs/libX11
 	cpuload? ( sys-libs/libstatgrab )
 	kbindicator? ( x11-libs/libxkbcommon )
