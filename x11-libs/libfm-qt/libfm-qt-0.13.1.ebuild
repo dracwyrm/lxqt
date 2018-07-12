@@ -29,7 +29,6 @@ RDEPEND="
 	media-libs/libexif:=
 	>=x11-libs/libfm-1.2.0:=
 	x11-libs/libxcb:=
-	x11-misc/pcmanfm-qt:0/$(get_version_component_range 2)
 "
 DEPEND="${RDEPEND}
 	dev-qt/linguist-tools:5
