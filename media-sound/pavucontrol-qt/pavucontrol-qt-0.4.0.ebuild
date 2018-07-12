@@ -22,9 +22,9 @@ RDEPEND="
 	dev-libs/glib:2
 	dev-libs/libqtxdg:0/3
 	media-sound/pulseaudio[glib]
-	dev-qt/qtcore:5
-	dev-qt/qtdbus:5
-	dev-qt/qtwidgets:5
+	dev-qt/qtcore:5=
+	dev-qt/qtdbus:5=
+	dev-qt/qtwidgets:5=
 "
 DEPEND="${RDEPEND}
 	>=dev-util/lxqt-build-tools-0.5.0

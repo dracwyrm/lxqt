@@ -20,14 +20,14 @@ SLOT="0/$(get_version_component_range 2)"
 
 RDEPEND="
 	dev-libs/libqtxdg:0/3
-	dev-qt/qtcore:5
-	dev-qt/qtdbus:5
-	dev-qt/qtgui:5
-	dev-qt/qtsvg:5
-	dev-qt/qtwidgets:5
-	dev-qt/qtx11extras:5
-	kde-frameworks/kidletime:5
-	kde-frameworks/solid:5
+	dev-qt/qtcore:5=
+	dev-qt/qtdbus:5=
+	dev-qt/qtgui:5=
+	dev-qt/qtsvg:5=
+	dev-qt/qtwidgets:5=
+	dev-qt/qtx11extras:5=
+	kde-frameworks/kidletime:5=
+	kde-frameworks/solid:5=
 	lxqt-base/liblxqt:0/$(get_version_component_range 2)
 	|| (
 		sys-power/upower

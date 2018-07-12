@@ -20,13 +20,13 @@ SLOT="0"
 
 RDEPEND="
 	dev-libs/glib:2
-	dev-qt/qtcore:5
-	dev-qt/qtdbus:5
-	dev-qt/qtgui:5
-	dev-qt/qtprintsupport:5
-	dev-qt/qtsvg:5
-	dev-qt/qtwidgets:5
-	dev-qt/qtx11extras:5
+	dev-qt/qtcore:5=
+	dev-qt/qtdbus:5=
+	dev-qt/qtgui:5=
+	dev-qt/qtprintsupport:5=
+	dev-qt/qtsvg:5=
+	dev-qt/qtwidgets:5=
+	dev-qt/qtx11extras:5=
 	media-libs/libexif
 	>=x11-libs/libfm-1.2:=
 	>=x11-libs/libfm-qt-0.13.0:=

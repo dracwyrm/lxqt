@@ -16,13 +16,13 @@ IUSE=""
 
 DEPEND="
 	dev-libs/libqtxdg:0/3
-	dev-qt/qtcore:5
-	dev-qt/qtdbus:5
-	dev-qt/qtgui:5
-	dev-qt/qtwidgets:5
-	dev-qt/qtx11extras:5
-	dev-qt/qtnetwork:5
-	kde-frameworks/kwindowsystem:5[X]
+	dev-qt/qtcore:5=
+	dev-qt/qtdbus:5=
+	dev-qt/qtgui:5=
+	dev-qt/qtwidgets:5=
+	dev-qt/qtx11extras:5=
+	dev-qt/qtnetwork:5=
+	kde-frameworks/kwindowsystem:5=[X]
 	x11-libs/libxcb
 	x11-libs/libX11
 "

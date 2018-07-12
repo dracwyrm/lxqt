@@ -27,21 +27,21 @@ REQUIRED_USE="volume? ( || ( alsa pulseaudio ) )"
 RDEPEND="
 	dev-libs/glib:2
 	dev-libs/libqtxdg:0/3
-	dev-qt/qtcore:5
-	dev-qt/qtdbus:5
-	dev-qt/qtgui:5
-	dev-qt/qtsvg:5
-	dev-qt/qtwidgets:5
-	dev-qt/qtx11extras:5
-	dev-qt/qtxml:5
-	kde-frameworks/kguiaddons:5
-	kde-frameworks/kwindowsystem:5[X]
+	dev-qt/qtcore:5=
+	dev-qt/qtdbus:5=
+	dev-qt/qtgui:5=
+	dev-qt/qtsvg:5=
+	dev-qt/qtwidgets:5=
+	dev-qt/qtx11extras:5=
+	dev-qt/qtxml:5=
+	kde-frameworks/kguiaddons:5=
+	kde-frameworks/kwindowsystem:5=[X]
 	lxqt-base/liblxqt:0/$(get_version_component_range 2)
 	lxqt-base/lxqt-globalkeys:0/$(get_version_component_range 2)
 	x11-libs/libX11
 	cpuload? ( sys-libs/libstatgrab )
 	kbindicator? ( x11-libs/libxkbcommon )
-	mount? ( kde-frameworks/solid:5 )
+	mount? ( kde-frameworks/solid:5= )
 	networkmonitor? ( sys-libs/libstatgrab )
 	sensors? ( sys-apps/lm_sensors )
 	statusnotifier? ( dev-libs/libdbusmenu-qt[qt5(+)] )

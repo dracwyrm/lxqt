@@ -21,9 +21,9 @@ SLOT="0/$(get_version_component_range 2)"
 RDEPEND="
 	dev-libs/libdbusmenu-qt:=[qt5(+)]
 	dev-libs/libqtxdg:0/3
-	dev-qt/qtcore:5
-	dev-qt/qtgui:5
-	dev-qt/qtwidgets:5
+	dev-qt/qtcore:5=
+	dev-qt/qtgui:5=
+	dev-qt/qtwidgets:5=
 	lxqt-base/liblxqt:0/$(get_version_component_range 2)
 	x11-libs/libfm-qt:0/$(get_version_component_range 2)
 	x11-libs/libX11

@@ -20,15 +20,15 @@ SLOT="0/$(get_version_component_range 2)"
 
 RDEPEND="
 	dev-libs/libqtxdg:0/3
-	dev-qt/qtconcurrent:5
-	dev-qt/qtcore:5
-	dev-qt/qtdbus:5
-	dev-qt/qtgui:5
-	dev-qt/qtwidgets:5
-	dev-qt/qtx11extras:5
-	dev-qt/qtxml:5
-	kde-frameworks/kwindowsystem:5
-	kde-plasma/libkscreen:5
+	dev-qt/qtconcurrent:5=
+	dev-qt/qtcore:5=
+	dev-qt/qtdbus:5=
+	dev-qt/qtgui:5=
+	dev-qt/qtwidgets:5=
+	dev-qt/qtx11extras:5=
+	dev-qt/qtxml:5=
+	kde-frameworks/kwindowsystem:5=
+	kde-plasma/libkscreen:5=
 	lxqt-base/liblxqt:0/$(get_version_component_range 2)
 	sys-libs/zlib:=
 	x11-apps/setxkbmap
