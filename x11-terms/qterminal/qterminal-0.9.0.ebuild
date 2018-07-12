@@ -19,11 +19,11 @@ LICENSE="GPL-2+"
 SLOT="0"
 
 RDEPEND="
-	dev-qt/qtcore:5
-	dev-qt/qtdbus:5
-	dev-qt/qtgui:5
-	dev-qt/qtwidgets:5
-	dev-qt/qtx11extras:5
+	dev-qt/qtcore:5=
+	dev-qt/qtdbus:5=
+	dev-qt/qtgui:5=
+	dev-qt/qtwidgets:5=
+	dev-qt/qtx11extras:5=
 	x11-libs/libX11
 	=x11-libs/qtermwidget-$(get_version_component_range 1-2)*
 "
