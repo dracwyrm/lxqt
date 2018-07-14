@@ -6,6 +6,6 @@
 		<name>LXQt</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">lxde/lxqt-admin</remote-id>
+		<remote-id type="github">lxqt/lxqt-admin</remote-id>
 	</upstream>
 </pkgmetadata>

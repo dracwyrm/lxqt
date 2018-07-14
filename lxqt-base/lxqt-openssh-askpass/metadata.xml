@@ -6,6 +6,6 @@
 		<name>LXQt</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">lxde/lxqt-</remote-id>
+		<remote-id type="github">lxqt/lxqt-openssh-askpass</remote-id>
 	</upstream>
 </pkgmetadata>

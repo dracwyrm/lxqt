@@ -2,7 +2,6 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-
 inherit cmake-utils eapi7-ver
 
 DESCRIPTION="Qt port of libfm, a library providing components to build desktop file managers"
@@ -17,15 +16,15 @@ else
 fi
 
 LICENSE="GPL-2+ LGPL-2.1+"
-SLOT="0/$(ver_cut 1-2)"
+SLOT="0/5"
 
 RDEPEND="
 	dev-libs/glib:2
-	dev-qt/qtcore:5=
-	dev-qt/qtgui:5=
-	dev-qt/qtwidgets:5=
-	dev-qt/qtx11extras:5=
-	lxqt-base/liblxqt:${SLOT}
+	dev-qt/qtcore:5
+	dev-qt/qtgui:5
+	dev-qt/qtwidgets:5
+	dev-qt/qtx11extras:5
+	>=lxde-base/menu-cache-1.1.0
 	media-libs/libexif:=
 	>=x11-libs/libfm-1.2.0:=
 	x11-libs/libxcb:=
@@ -36,4 +35,9 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 
-mycmakeargs=( -DPULL_TRANSLATIONS=NO )
+src_configure() {
+	local mycmakeargs=(
+		-DPULL_TRANSLATIONS=OFF
+	)
+	cmake-utils_src_configure
+}

@@ -14,7 +14,7 @@ else
 fi
 
 LICENSE="metapackage"
-SLOT="0/$(ver_cut 1-2)"
+SLOT="0"
 
 IUSE="+about admin +filemanager lightdm lximage minimal nls +policykit
 	powermanagement processviewer screenshot sddm ssh-askpass
@@ -24,39 +24,38 @@ IUSE="+about admin +filemanager lightdm lximage minimal nls +policykit
 # install expects oxygen icons, until the user specifies otherwise (bug 543380)
 RDEPEND="
 	kde-frameworks/oxygen-icons
-	lxqt-base/lxqt-config:${SLOT}
-	lxqt-base/lxqt-globalkeys:${SLOT}
-	lxqt-base/lxqt-notificationd:${SLOT}
-	lxqt-base/lxqt-panel:${SLOT}
-	lxqt-base/lxqt-qtplugin:${SLOT}
-	lxqt-base/lxqt-runner:${SLOT}
-	lxqt-base/lxqt-session:${SLOT}
+	>=lxde-base/lxmenu-data-0.1.5
+	=lxqt-base/lxqt-config-${MY_PV}
+	=lxqt-base/lxqt-globalkeys-${MY_PV}
+	=lxqt-base/lxqt-notificationd-${MY_PV}
+	=lxqt-base/lxqt-panel-${MY_PV}
+	=lxqt-base/lxqt-qtplugin-${MY_PV}
+	=lxqt-base/lxqt-runner-${MY_PV}
+	=lxqt-base/lxqt-session-${MY_PV}
 	virtual/ttf-fonts
 	x11-themes/lxqt-themes:${SLOT}
-	about? ( lxqt-base/lxqt-about:${SLOT} )
-	admin? ( lxqt-base/lxqt-admin:${SLOT} )
-	filemanager? ( x11-misc/pcmanfm-qt:${SLOT} )
+	about? ( lxqt-base/lxqt-about:${MY_PV} )
+	admin? ( lxqt-base/lxqt-admin:${MY_PV} )
+	filemanager? ( x11-misc/pcmanfm-qt:${MY_PV} )
 	lightdm? ( x11-misc/lightdm )
 	lximage? ( media-gfx/lximage-qt )
 	!minimal? (
 		x11-wm/openbox
 		x11-misc/obconf-qt
 	)
-	nls? ( lxqt-base/lxqt-l10n:${SLOT} )
+	nls? ( lxqt-base/lxqt-l10n:${MY_PV} )
 	policykit? (
-		lxqt-base/lxqt-policykit:${SLOT}
+		=lxqt-base/lxqt-policykit-${MY_PV}
 		|| (
 			sys-auth/consolekit[policykit(-)]
 			sys-apps/systemd[policykit(-)]
 		)
 	)
-	powermanagement? ( lxqt-base/lxqt-powermanagement:${SLOT} )
+	powermanagement? ( =lxqt-base/lxqt-powermanagement-${MY_PV} )
 	processviewer? ( x11-misc/qps:0 )
 	screenshot? ( x11-misc/screengrab:0 )
 	sddm? ( >=x11-misc/sddm-0.11.0 )
-	ssh-askpass? ( lxqt-base/lxqt-openssh-askpass:${SLOT} )
-	sudo? ( lxqt-base/lxqt-sudo:${SLOT} )
+	ssh-askpass? ( =lxqt-base/lxqt-openssh-askpass-${MY_PV} )
+	sudo? ( =lxqt-base/lxqt-sudo-${MY_PV} )
 	terminal? ( x11-terms/qterminal:0 )
 "
-
-S="${WORKDIR}"

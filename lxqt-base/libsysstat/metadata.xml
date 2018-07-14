@@ -6,6 +6,6 @@
 		<name>LXQt</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">lxde/libsysstat</remote-id>
+		<remote-id type="github">lxqt/libsysstat</remote-id>
 	</upstream>
 </pkgmetadata>

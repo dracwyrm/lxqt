@@ -6,7 +6,7 @@
 		<name>LXQt</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">lxde/lxqt-session</remote-id>
+		<remote-id type="github">lxqt/lxqt-session</remote-id>
 	</upstream>
 	<use>
 		<flag name="themes">Install LXQt themes and graphics</flag>

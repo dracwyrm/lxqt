@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit cmake-utils gnome2-utils
+inherit cmake-utils gnome2-utils xdg-utils
 
 DESCRIPTION="Qt application for getting screenshots"
 HOMEPAGE="https://lxqt.org/"
@@ -16,22 +16,24 @@ IUSE=""
 
 DEPEND="
 	dev-libs/libqtxdg:0/3
-	dev-qt/qtcore:5=
-	dev-qt/qtdbus:5=
-	dev-qt/qtgui:5=
-	dev-qt/qtwidgets:5=
-	dev-qt/qtx11extras:5=
-	dev-qt/qtnetwork:5=
-	kde-frameworks/kwindowsystem:5=[X]
+	dev-qt/qtcore:5
+	dev-qt/qtdbus:5
+	dev-qt/qtgui:5
+	dev-qt/qtwidgets:5
+	dev-qt/qtx11extras:5
+	dev-qt/qtnetwork:5
+	kde-frameworks/kwindowsystem:5[X]
 	x11-libs/libxcb
 	x11-libs/libX11
 "
 RDEPEND="${DEPEND}"
 
 pkg_postinst() {
+	xdg_desktop_database_update
 	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
+	xdg_desktop_database_update
 	gnome2_icon_cache_update
 }

@@ -13,18 +13,23 @@ else
 fi
 
 DESCRIPTION="Qt terminal emulator widget"
-HOMEPAGE="https://github.com/lxde/qtermwidget"
+HOMEPAGE="https://github.com/lxqt/qtermwidget"
 
 LICENSE="GPL-2+ LGPL-2.1+"
-SLOT="0"
+SLOT="0/${PV}"
 
 RDEPEND="
-	dev-qt/qtcore:5=
-	dev-qt/qtgui:5=
-	dev-qt/qtwidgets:5=
+	dev-qt/qtcore:5
+	dev-qt/qtgui:5
+	dev-qt/qtwidgets:5
 "
 DEPEND="${RDEPEND}
 	>=dev-util/lxqt-build-tools-0.5.0
 "
 
-PATCHES=( "${FILESDIR}/${P}-nofetch.patch" )
+src_configure() {
+	local mycmakeargs=(
+		-DPULL_TRANSLATIONS=OFF
+	)
+	cmake-utils_src_configure
+}
