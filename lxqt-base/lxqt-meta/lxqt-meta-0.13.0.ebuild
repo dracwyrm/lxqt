@@ -7,6 +7,8 @@ inherit eapi7-ver
 DESCRIPTION="Meta ebuild for LXQt, the Lightweight Desktop Environment"
 HOMEPAGE="https://lxqt.org/"
 
+MY_PV="$(ver_cut 1-2)*"
+
 if [[ ${PV} = *9999* ]]; then
 	KEYWORDS="-*"
 else
