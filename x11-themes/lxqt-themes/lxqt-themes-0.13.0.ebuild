@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit cmake-utils eapi7-ver
+inherit cmake-utils
 
 DESCRIPTION="Themes, graphics and icons for LXQt"
 HOMEPAGE="https://lxqt.org/"
@@ -15,12 +15,10 @@ else
 	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 fi
 
-LICENSE="GPL-2+ LGPL-2.1+"
-SLOT="0/$(ver_cut 1-2)"
+LICENSE="LGPL-2.1+"
+SLOT="0"
 
 RDEPEND="!lxqt-base/lxqt-common"
 DEPEND="${RDEPEND}
 	>=dev-util/lxqt-build-tools-0.5.0
 "
-
-mycmakeargs=( -DPULL_TRANSLATIONS=OFF )

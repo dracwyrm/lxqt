@@ -2,7 +2,6 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-
 inherit cmake-utils eapi7-ver
 
 if [[ "${PV}" == "9999" ]]; then
@@ -17,28 +16,31 @@ DESCRIPTION="Fast lightweight tabbed filemanager (Qt port)"
 HOMEPAGE="https://lxqt.org/"
 
 LICENSE="GPL-2+ LGPL-2.1+"
-SLOT="0/$(ver_cut 1-2)"
+SLOT="0"
 
 RDEPEND="
 	dev-libs/glib:2
-	dev-qt/qtcore:5=
-	dev-qt/qtdbus:5=
-	dev-qt/qtgui:5=
-	dev-qt/qtwidgets:5=
-	dev-qt/qtx11extras:5=
+	dev-qt/qtcore:5
+	dev-qt/qtdbus:5
+	dev-qt/qtgui:5
+	dev-qt/qtwidgets:5
+	dev-qt/qtx11extras:5
 	>=x11-libs/libfm-1.2.0:=
-	x11-libs/libfm-qt:${SLOT}
+	=x11-libs/libfm-qt-$(ver_cut 1-2)*
 	x11-libs/libxcb:=
 	x11-misc/xdg-utils
 	virtual/eject
 	virtual/freedesktop-icon-theme
+	!lxqt-base/lxqt-common
 "
 DEPEND="${RDEPEND}
 	dev-qt/linguist-tools:5
 	>=dev-util/lxqt-build-tools-0.5.0
-	>=dev-util/intltool-0.40
-	sys-devel/gettext
-	virtual/pkgconfig
 "
 
-mycmakeargs=( -DPULL_TRANSLATIONS=NO )
+src_configure() {
+	local mycmakeargs=(
+		-DPULL_TRANSLATIONS=OFF
+	)
+	cmake-utils_src_configure
+}

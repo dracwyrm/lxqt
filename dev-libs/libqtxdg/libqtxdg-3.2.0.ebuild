@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit cmake-utils virtualx eapi7-ver
+inherit cmake-utils eapi7-ver virtualx
 
 DESCRIPTION="A Qt implementation of XDG standards"
 HOMEPAGE="https://lxqt.org/"
@@ -15,17 +15,17 @@ else
 	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 fi
 
-LICENSE="GPL-2+ LGPL-2.1"
+LICENSE="LGPL-2.1+ Nokia-Qt-LGPL-Exception-1.1"
 SLOT="0/$(ver_cut 1)"
 IUSE="test"
 
 RDEPEND="
-	dev-qt/qtcore:5=
-	dev-qt/qtdbus:5=
+	dev-qt/qtcore:5
+	dev-qt/qtdbus:5
 	dev-qt/qtgui:5=
-	dev-qt/qtsvg:5=
-	dev-qt/qtwidgets:5=
-	dev-qt/qtxml:5=
+	dev-qt/qtsvg:5
+	dev-qt/qtwidgets:5
+	dev-qt/qtxml:5
 	x11-misc/xdg-utils
 "
 DEPEND="${RDEPEND}
@@ -41,5 +41,6 @@ src_configure() {
 }
 
 src_test() {
-	VIRTUALX_COMMAND="cmake-utils_src_test" virtualmake
+	# Tests don't work with C
+	LC_ALL=en_US.utf8 virtx cmake-utils_src_test
 }

@@ -6,6 +6,6 @@
 		<name>LXQt</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">lxde/obconf-qt</remote-id>
+		<remote-id type="github">lxqt/obconf-qt</remote-id>
 	</upstream>
 </pkgmetadata>

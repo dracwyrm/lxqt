@@ -6,6 +6,6 @@
 		<name>LXQt</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">lxde/pcmanfm-qt</remote-id>
+		<remote-id type="github">lxqt/pcmanfm-qt</remote-id>
 	</upstream>
 </pkgmetadata>

@@ -11,6 +11,6 @@
 		Qt widget for using as a built-in console or terminal emulation widget.
 	</longdescription>
 	<upstream>
-		<remote-id type="github">qterminal/qtermwidget</remote-id>
+		<remote-id type="github">lxqt/qtermwidget</remote-id>
 	</upstream>
 </pkgmetadata>

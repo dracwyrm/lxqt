@@ -15,23 +15,24 @@ else
 	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 fi
 
-LICENSE="GPL-2+ LGPL-2.1+"
-SLOT="0/$(ver_cut 1-2)"
+LICENSE="LGPL-2.1+"
+SLOT="0"
 
 RDEPEND="
-	dev-libs/glib:2
-	dev-libs/libqtxdg:0/3
-	dev-qt/qtcore:5=
-	dev-qt/qtdbus:5=
-	dev-qt/qtgui:5=
-	dev-qt/qtwidgets:5=
-	dev-qt/qtx11extras:5=
-	dev-qt/qtxml:5=
-	lxqt-base/liblxqt:${SLOT}
-	kde-frameworks/kwindowsystem:5=
-	x11-libs/libX11
+	dev-qt/qtcore:5
+	dev-qt/qtdbus:5
+	dev-qt/qtgui:5
+	dev-qt/qtwidgets:5
+	=lxqt-base/liblxqt-$(ver_cut 1-2)*
+	kde-frameworks/kwindowsystem:5
 "
 DEPEND="${RDEPEND}
-	>=dev-util/lxqt-build-tools-0.5.0"
+	>=dev-util/lxqt-build-tools-0.5.0
+"
 
-mycmakeargs=( -DPULL_TRANSLATIONS=OFF )
+src_configure() {
+	local mycmakeargs=(
+		-DPULL_TRANSLATIONS=OFF
+	)
+	cmake-utils_src_configure
+}
