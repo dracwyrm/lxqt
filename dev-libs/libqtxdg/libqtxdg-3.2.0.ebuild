@@ -2,10 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit cmake-utils virtualx versionator
+inherit cmake-utils virtualx eapi7-ver
 
 DESCRIPTION="A Qt implementation of XDG standards"
-HOMEPAGE="http://lxqt.org/"
+HOMEPAGE="https://lxqt.org/"
 
 if [[ ${PV} == *9999 ]]; then
 	inherit git-r3
@@ -15,8 +15,8 @@ else
 	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 fi
 
-LICENSE="LGPL-2.1"
-SLOT="0/$(get_version_component_range 1)"
+LICENSE="GPL-2+ LGPL-2.1"
+SLOT="0/$(ver_cut 1)"
 IUSE="test"
 
 RDEPEND="

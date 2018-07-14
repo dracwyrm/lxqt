@@ -5,7 +5,7 @@ EAPI=6
 inherit cmake-utils
 
 DESCRIPTION="A Qt-based interface to system statistics"
-HOMEPAGE="http://lxqt.org/"
+HOMEPAGE="https://lxqt.org/"
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
@@ -15,7 +15,7 @@ else
 	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 fi
 
-LICENSE="LGPL-2.1+"
+LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0"
 
 RDEPEND="dev-qt/qtcore:5="

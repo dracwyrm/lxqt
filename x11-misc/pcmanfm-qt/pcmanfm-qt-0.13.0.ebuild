@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit cmake-utils versionator
+inherit cmake-utils eapi7-ver
 
 if [[ "${PV}" == "9999" ]]; then
 	inherit git-r3
@@ -14,10 +14,10 @@ else
 fi
 
 DESCRIPTION="Fast lightweight tabbed filemanager (Qt port)"
-HOMEPAGE="https://wiki.lxde.org/en/PCManFM"
+HOMEPAGE="https://lxqt.org/"
 
-LICENSE="GPL-2+"
-SLOT="0/$(get_version_component_range 2)"
+LICENSE="GPL-2+ LGPL-2.1+"
+SLOT="0/$(ver_cut 1-2)"
 
 RDEPEND="
 	dev-libs/glib:2
@@ -27,7 +27,7 @@ RDEPEND="
 	dev-qt/qtwidgets:5=
 	dev-qt/qtx11extras:5=
 	>=x11-libs/libfm-1.2.0:=
-	x11-libs/libfm-qt:0/$(get_version_component_range 2)
+	x11-libs/libfm-qt:${SLOT}
 	x11-libs/libxcb:=
 	x11-misc/xdg-utils
 	virtual/eject

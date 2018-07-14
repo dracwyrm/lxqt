@@ -2,12 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit cmake-utils versionator
+inherit cmake-utils eapi7-ver
 
 DESCRIPTION="LXQt desktop panel and plugins"
-HOMEPAGE="http://lxqt.org/"
-
-MY_PV="$(get_version_component_range 1-2)*"
+HOMEPAGE="https://lxqt.org/"
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
@@ -17,8 +15,8 @@ else
 	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 fi
 
-LICENSE="LGPL-2.1+"
-SLOT="0/$(get_version_component_range 2)"
+LICENSE="GPL-2+ LGPL-2.1+"
+SLOT="0/$(ver_cut 1-2)"
 IUSE="+alsa clock colorpicker cpuload +desktopswitch +directorymenu dom +kbindicator +mainmenu
 	+mount networkmonitor pulseaudio +quicklaunch sensors +showdesktop
 	+spacer statusnotifier sysstat +taskbar +tray +volume +worldclock"
@@ -36,8 +34,8 @@ RDEPEND="
 	dev-qt/qtxml:5=
 	kde-frameworks/kguiaddons:5=
 	kde-frameworks/kwindowsystem:5=[X]
-	lxqt-base/liblxqt:0/$(get_version_component_range 2)
-	lxqt-base/lxqt-globalkeys:0/$(get_version_component_range 2)
+	lxqt-base/liblxqt:${SLOT}
+	lxqt-base/lxqt-globalkeys:${SLOT}
 	x11-libs/libX11
 	cpuload? ( sys-libs/libstatgrab )
 	kbindicator? ( x11-libs/libxkbcommon )

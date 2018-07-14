@@ -15,7 +15,7 @@ fi
 DESCRIPTION="Qt terminal emulator widget"
 HOMEPAGE="https://github.com/lxde/qtermwidget"
 
-LICENSE="GPL-2+"
+LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0"
 
 RDEPEND="

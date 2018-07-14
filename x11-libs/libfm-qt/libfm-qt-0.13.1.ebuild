@@ -3,10 +3,10 @@
 
 EAPI=6
 
-inherit cmake-utils versionator
+inherit cmake-utils eapi7-ver
 
 DESCRIPTION="Qt port of libfm, a library providing components to build desktop file managers"
-HOMEPAGE="http://lxqt.org/"
+HOMEPAGE="https://lxqt.org/"
 
 if [[ "${PV}" == "9999" ]]; then
 	inherit git-r3
@@ -16,8 +16,8 @@ else
 	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 fi
 
-LICENSE="LGPL-2.1+"
-SLOT="0/$(get_version_component_range 2)"
+LICENSE="GPL-2+ LGPL-2.1+"
+SLOT="0/$(ver_cut 1-2)"
 
 RDEPEND="
 	dev-libs/glib:2
@@ -25,7 +25,7 @@ RDEPEND="
 	dev-qt/qtgui:5=
 	dev-qt/qtwidgets:5=
 	dev-qt/qtx11extras:5=
-	lxqt-base/liblxqt:0/$(get_version_component_range 2)
+	lxqt-base/liblxqt:${SLOT}
 	media-libs/libexif:=
 	>=x11-libs/libfm-1.2.0:=
 	x11-libs/libxcb:=

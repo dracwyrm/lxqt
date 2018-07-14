@@ -6,12 +6,12 @@ EAPI=6
 inherit cmake-utils gnome2-utils
 
 DESCRIPTION="Visual process manager - Qt version of ps/top"
-HOMEPAGE="http://lxqt.org/"
+HOMEPAGE="https://lxqt.org/"
 SRC_URI="https://downloads.lxqt.org/downloads/${PN}/${PV}/${P}.tar.xz"
 
-LICENSE="GPL-2+"
+LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 IUSE="debug"
 
 RDEPEND="

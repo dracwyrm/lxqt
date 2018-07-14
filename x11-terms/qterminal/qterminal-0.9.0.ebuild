@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit cmake-utils gnome2-utils versionator
+inherit cmake-utils gnome2-utils eapi7-ver
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
@@ -13,9 +13,9 @@ else
 fi
 
 DESCRIPTION="Qt-based multitab terminal emulator"
-HOMEPAGE="https://github.com/lxde/qterminal"
+HOMEPAGE="https://lxqt.org/"
 
-LICENSE="GPL-2+"
+LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0"
 
 RDEPEND="
@@ -25,7 +25,7 @@ RDEPEND="
 	dev-qt/qtwidgets:5=
 	dev-qt/qtx11extras:5=
 	x11-libs/libX11
-	=x11-libs/qtermwidget-$(get_version_component_range 1-2)*
+	=x11-libs/qtermwidget-$(ver_cut 1-2)*
 "
 DEPEND="${RDEPEND}
 	>=dev-util/lxqt-build-tools-0.5.0

@@ -5,7 +5,7 @@ EAPI=6
 inherit cmake-utils
 
 DESCRIPTION="LXImage Image Viewer - GPicView replacement"
-HOMEPAGE="http://lxqt.org/"
+HOMEPAGE="https://lxqt.org/"
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
