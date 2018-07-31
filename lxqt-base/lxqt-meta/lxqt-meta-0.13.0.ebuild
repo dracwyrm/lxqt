@@ -35,17 +35,17 @@ RDEPEND="
 	=lxqt-base/lxqt-runner-${MY_PV}
 	=lxqt-base/lxqt-session-${MY_PV}
 	virtual/ttf-fonts
-	x11-themes/lxqt-themes:${SLOT}
-	about? ( lxqt-base/lxqt-about:${MY_PV} )
-	admin? ( lxqt-base/lxqt-admin:${MY_PV} )
-	filemanager? ( x11-misc/pcmanfm-qt:${MY_PV} )
+	=x11-themes/lxqt-themes-${MY_PV}
+	about? ( =lxqt-base/lxqt-about-${MY_PV} )
+	admin? ( =lxqt-base/lxqt-admin-${MY_PV} )
+	filemanager? ( =x11-misc/pcmanfm-qt-${MY_PV} )
 	lightdm? ( x11-misc/lightdm )
 	lximage? ( media-gfx/lximage-qt )
 	!minimal? (
 		x11-wm/openbox
 		x11-misc/obconf-qt
 	)
-	nls? ( lxqt-base/lxqt-l10n:${MY_PV} )
+	nls? ( =lxqt-base/lxqt-l10n-${MY_PV} )
 	policykit? (
 		=lxqt-base/lxqt-policykit-${MY_PV}
 		|| (
