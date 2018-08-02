@@ -18,7 +18,7 @@ fi
 LICENSE="metapackage"
 SLOT="0"
 
-IUSE="+about admin +filemanager lightdm lximage minimal nls +policykit
+IUSE="+about admin +filemanager lightdm lximage minimal nls
 	powermanagement processviewer screenshot sddm ssh-askpass
 	sudo terminal"
 
@@ -31,6 +31,7 @@ RDEPEND="
 	=lxqt-base/lxqt-globalkeys-${MY_PV}
 	=lxqt-base/lxqt-notificationd-${MY_PV}
 	=lxqt-base/lxqt-panel-${MY_PV}
+	=lxqt-base/lxqt-policykit-${MY_PV}
 	=lxqt-base/lxqt-qtplugin-${MY_PV}
 	=lxqt-base/lxqt-runner-${MY_PV}
 	=lxqt-base/lxqt-session-${MY_PV}
@@ -46,13 +47,6 @@ RDEPEND="
 		x11-misc/obconf-qt
 	)
 	nls? ( =lxqt-base/lxqt-l10n-${MY_PV} )
-	policykit? (
-		=lxqt-base/lxqt-policykit-${MY_PV}
-		|| (
-			sys-auth/consolekit[policykit(-)]
-			sys-apps/systemd[policykit(-)]
-		)
-	)
 	powermanagement? ( =lxqt-base/lxqt-powermanagement-${MY_PV} )
 	processviewer? ( x11-misc/qps:0 )
 	screenshot? ( x11-misc/screengrab:0 )
