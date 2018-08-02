@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit cmake-utils eapi7-ver
+inherit cmake-utils gnome2-utils eapi7-ver
 
 DESCRIPTION="LXQt system configuration control center"
 HOMEPAGE="https://lxqt.org/"
@@ -17,10 +17,10 @@ fi
 
 LICENSE="GPL-2 GPL-2+ GPL-3 LGPL-2 LGPL-2+ LGPL-2.1+ WTFPL-2"
 SLOT="0"
+IUSE="+monitor"
 
 RDEPEND="
 	dev-libs/libqtxdg:0/3
-	dev-qt/qtconcurrent:5
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
@@ -28,7 +28,6 @@ RDEPEND="
 	dev-qt/qtx11extras:5
 	dev-qt/qtxml:5
 	kde-frameworks/kwindowsystem:5
-	kde-plasma/libkscreen:5=
 	=lxqt-base/liblxqt-$(ver_cut 1-2)*
 	sys-libs/zlib:=
 	x11-apps/setxkbmap
@@ -36,15 +35,19 @@ RDEPEND="
 	x11-libs/libX11
 	x11-libs/libXcursor
 	x11-libs/libXfixes
+	monitor? ( kde-plasma/libkscreen:5= )
 "
 DEPEND="${DEPEND}
 	dev-qt/linguist-tools:5
 	>=dev-util/lxqt-build-tools-0.5.0
 "
 
+PATCHES=( "${FILESDIR}/${P}-remove-dependency-on-QtConcurrent.patch" )
+
 src_configure() {
 	local mycmakeargs=(
 		-DPULL_TRANSLATIONS=OFF
+		-DWITH_MONITOR="$(usex monitor)"
 	)
 	cmake-utils_src_configure
 }
@@ -52,4 +55,12 @@ src_configure() {
 src_install() {
 	cmake-utils_src_install
 	doman man/*.1 liblxqt-config-cursor/man/*.1 lxqt-config-appearance/man/*.1
+}
+
+pkg_postinst() {
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }
