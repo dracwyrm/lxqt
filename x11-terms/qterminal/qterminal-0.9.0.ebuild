@@ -15,6 +15,7 @@ fi
 DESCRIPTION="Qt-based multitab terminal emulator"
 HOMEPAGE="https://lxqt.org/"
 
+LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0"
 
 RDEPEND="
