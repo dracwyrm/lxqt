@@ -53,7 +53,7 @@ src_configure() {
 src_install(){
 	cmake-utils_src_install
 	doman lxqt-config-session/man/*.1 lxqt-session/man/*.1
-	
+
 	echo XDG_CONFIG_DIRS=\"${EPREFIX}/usr/share\" >> 91lxqt-config-dir
 	doenvd 91lxqt-config-dir
 }
