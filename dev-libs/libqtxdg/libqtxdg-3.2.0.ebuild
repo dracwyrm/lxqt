@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
+
 inherit cmake-utils eapi7-ver virtualx
 
 DESCRIPTION="A Qt implementation of XDG standards"

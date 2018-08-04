@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
+
 inherit eapi7-ver
 
 DESCRIPTION="Meta ebuild for LXQt, the Lightweight Desktop Environment"
