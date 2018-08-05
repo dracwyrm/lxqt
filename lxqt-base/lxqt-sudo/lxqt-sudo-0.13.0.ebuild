@@ -21,7 +21,7 @@ SLOT="0"
 
 RDEPEND="
 	app-admin/sudo
-	dev-libs/libqtxdg:0/3
+	>=dev-libs/libqtxdg-3.0.0
 	dev-qt/qtcore:5
 	dev-qt/qtwidgets:5
 	=lxqt-base/liblxqt-$(ver_cut 1-2)*

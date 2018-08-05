@@ -26,7 +26,7 @@ IUSE="+alsa clock colorpicker cpuload +desktopswitch +directorymenu dom +kbindic
 REQUIRED_USE="volume? ( || ( alsa pulseaudio ) )"
 
 RDEPEND="
-	dev-libs/libqtxdg:0/3
+	>=dev-libs/libqtxdg-3.0.0
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5

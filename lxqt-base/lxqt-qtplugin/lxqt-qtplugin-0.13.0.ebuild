@@ -21,7 +21,7 @@ SLOT="0"
 
 RDEPEND="
 	dev-libs/libdbusmenu-qt:=[qt5(+)]
-	dev-libs/libqtxdg:0/3
+	>=dev-libs/libqtxdg-3.0.0
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5=
