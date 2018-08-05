@@ -19,7 +19,7 @@ fi
 LICENSE="LGPL-2.1+"
 SLOT="0"
 
-RDEPEND=""
+RDEPEND="!=x11-misc/obconf-qt-0.9.0_p20150729"
 DEPEND="${RDEPEND}
 	dev-qt/linguist-tools:5
 	>=dev-util/lxqt-build-tools-0.5.0
