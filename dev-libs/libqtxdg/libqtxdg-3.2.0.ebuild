@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit cmake-utils eapi7-ver virtualx
+inherit cmake-utils virtualx
 
 DESCRIPTION="A Qt implementation of XDG standards"
 HOMEPAGE="https://lxqt.org/"
@@ -17,7 +17,7 @@ else
 fi
 
 LICENSE="LGPL-2.1+ Nokia-Qt-LGPL-Exception-1.1"
-SLOT="0/$(ver_cut 1)"
+SLOT="0"
 IUSE="test"
 
 RDEPEND="
